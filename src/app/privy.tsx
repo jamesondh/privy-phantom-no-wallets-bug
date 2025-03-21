@@ -4,29 +4,29 @@ import { PrivyClientConfig, PrivyProvider } from "@privy-io/react-auth";
 import { toSolanaWalletConnectors } from "@privy-io/react-auth/solana";
 
 export const privyConfig: PrivyClientConfig = {
-  embeddedWallets: {
-    createOnLogin: "users-without-wallets",
-    requireUserPasswordOnCreate: false,
-  },
-  loginMethods: [
-    "wallet",
-    "email",
-    "sms",
-    "google",
-    "twitter",
-    "farcaster",
-    "discord",
-    "github",
-  ],
+  // embeddedWallets: {
+  //   createOnLogin: "users-without-wallets",
+  //   requireUserPasswordOnCreate: false,
+  // },
+  // loginMethods: [
+  //   "wallet",
+  //   "email",
+  //   "sms",
+  //   "google",
+  //   "twitter",
+  //   "farcaster",
+  //   "discord",
+  //   "github",
+  // ],
   appearance: {
     walletChainType: "solana-only",
-    walletList: [
-      "detected_wallets",
-      "phantom",
-      "backpack",
-      "solflare",
-      "okx_wallet",
-    ],
+    // walletList: [
+    //   //   "detected_wallets",
+    //   // "phantom",
+    //   //   "backpack",
+    //   //   "solflare",
+    //   //   "okx_wallet",
+    // ],
   },
   externalWallets: {
     solana: {
@@ -37,7 +37,7 @@ export const privyConfig: PrivyClientConfig = {
 
 export default function Providers({ children }: { children: React.ReactNode }) {
   return (
-    <PrivyProvider appId={"clwzg505b0903op0f87p3csm5"} config={privyConfig}>
+    <PrivyProvider appId={"cm8iw27r700ehx1qt3x36rxed"} config={privyConfig}>
       {children}
     </PrivyProvider>
   );

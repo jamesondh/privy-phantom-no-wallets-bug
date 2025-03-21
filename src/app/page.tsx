@@ -1,15 +1,21 @@
 "use client";
 
-import { usePrivy, useSolanaWallets } from "@privy-io/react-auth";
+import {
+  usePrivy,
+  useSolanaWallets,
+  useConnectWallet,
+} from "@privy-io/react-auth";
 
 export default function Home() {
   const { login, logout, ready, authenticated, user } = usePrivy();
   const { wallets } = useSolanaWallets();
+  const { connectWallet } = useConnectWallet();
 
   return (
     <div className="p-4 flex flex-col gap-4">
       <button onClick={login}>Log in</button>
       <button onClick={logout}>Log out</button>
+      <button onClick={connectWallet}>Connect wallet</button>
       <p>Authenticated: {authenticated ? "yes" : "no"}</p>
       <p>Ready: {ready ? "yes" : "no"}</p>
       <p>User:</p>
